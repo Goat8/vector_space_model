@@ -10,9 +10,7 @@ How to instantiate a vector space model. We need to do three things:
 Model represent each document and query by a term vector. Document and Query vectors consists of a number of elements corresponding to the weights of different terms. How to define term weights? Term weights define the importance of each word. Also how to define similarity measure?
 If we have |V| terms in our vocabulary, we define a |V |-dimensional space, as eeach word in our vocabulary defines a dimension, thus giving |V | dimensions.
 
-Bit Vector Representation and dot Product similarity. Represent each vector as bit vector where presence of terms reperesent 1 and rest of terms as 0, then take dot product of query bit vector with each document bit vector separatley and rank documents based on dot product score. It is simply the count of how many unique query terms are matched in the document. The drawback is that it doesnot involve intuition simply counts the number of unique query terms matched in each document. Itx word presence or absence, ignoring the frequency of word.
-
-Consider multiple occurrences of a term in a document as opposed to binary representation; we should consider the TF instead of just the absence or presence.
+Consider multiple occurrences of a term in a document as opposed to binary representation; I have considered the TF instead of just the absence or presence.
 TF (w, d) = count(w, d).
 How to distinguish insignificant word from significcant words cause using TF approach would give more importance to Stop Words which are usually more frequent. We can use the global statistics of terms. 
 
@@ -25,3 +23,4 @@ M is number of documents
 df(w) the total number of documents containing w
 
 To give less score to less informative word take log IDF. 
+
