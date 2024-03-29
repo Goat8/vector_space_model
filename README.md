@@ -1,8 +1,6 @@
 # Information Retrievel Model 
-Vector space model works based on the idea of similarity. If a particular document is more similar to the query than the other document then first document is considered more relavant to the query. 
-Ranking function is defined as the similarity between the query and the document and documents are ranked. 
 
-How to instantiate a vector space model. We need to do three things:
+How to instantiate a vector space model
 1. define the dimensions (the concept of what a document is);
 2. decide how to place documents and queries as vectors in the vector space; and
 3. define the similarity between two vectors.
